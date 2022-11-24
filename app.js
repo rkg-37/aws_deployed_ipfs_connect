@@ -31,19 +31,16 @@ if (!fs.existsSync("./files")) {
 
 const hash_dir = [];
 
-const ip = get_ipaddress();
 
-function get_ipaddress(){
-    var ip_value = "";
-    exec('curl ifconfig.me', (err, stdout) => {
-        if (err) {
-            console.log("cannot get ip, command failed : curl ifconfig.me");
-            exit();
-        }
-        ip_value = stdout.trim();
-    });
-    return ip_value;
-}
+var ip = "";
+exec('curl ifconfig.me', (err, stdout) => {
+    if (err) {
+        console.log("cannot get ip, command failed : curl ifconfig.me");
+        exit();
+    }
+    ip = stdout.trim();
+});
+    
 
 
 app.get('/home',(req,res)=>{

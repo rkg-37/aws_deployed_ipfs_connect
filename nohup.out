@@ -1,0 +1,168 @@
+Initializing daemon...
+Kubo version: 0.16.0
+Repo version: 12
+System version: amd64/linux
+Golang version: go1.19.1
+2022/11/13 10:07:57 failed to sufficiently increase receive buffer size (was: 208 kiB, wanted: 2048 kiB, got: 416 kiB). See https://github.com/lucas-clemente/quic-go/wiki/UDP-Receive-Buffer-Size for details.
+Swarm listening on /ip4/127.0.0.1/tcp/4001
+Swarm listening on /ip4/127.0.0.1/udp/4001/quic
+Swarm listening on /ip4/172.31.21.9/tcp/4001
+Swarm listening on /ip4/172.31.21.9/udp/4001/quic
+Swarm listening on /ip6/::1/tcp/4001
+Swarm listening on /ip6/::1/udp/4001/quic
+Swarm listening on /p2p-circuit
+Swarm announcing /ip4/127.0.0.1/tcp/4001
+Swarm announcing /ip4/127.0.0.1/udp/4001/quic
+Swarm announcing /ip4/172.31.21.9/tcp/4001
+Swarm announcing /ip4/172.31.21.9/udp/4001/quic
+Swarm announcing /ip4/54.83.105.94/udp/4001/quic
+Swarm announcing /ip6/::1/tcp/4001
+Swarm announcing /ip6/::1/udp/4001/quic
+API server listening on /ip4/127.0.0.1/tcp/5001
+WebUI: http://127.0.0.1:5001/webui
+Gateway (readonly) server listening on /ip4/127.0.0.1/tcp/8080
+Daemon is ready
+
+Received interrupt signal, shutting down...
+(Hit ctrl-c again to force-shutdown the daemon.)
+Initializing daemon...
+Kubo version: 0.16.0
+Repo version: 12
+System version: amd64/linux
+Golang version: go1.19.1
+2022/11/13 10:28:54 failed to sufficiently increase receive buffer size (was: 208 kiB, wanted: 2048 kiB, got: 416 kiB). See https://github.com/lucas-clemente/quic-go/wiki/UDP-Receive-Buffer-Size for details.
+Swarm listening on /ip4/127.0.0.1/tcp/4001
+Swarm listening on /ip4/127.0.0.1/udp/4001/quic
+Swarm listening on /ip4/172.31.21.9/tcp/4001
+Swarm listening on /ip4/172.31.21.9/udp/4001/quic
+Swarm listening on /ip6/::1/tcp/4001
+Swarm listening on /ip6/::1/udp/4001/quic
+Swarm listening on /p2p-circuit
+Swarm announcing /ip4/127.0.0.1/tcp/4001
+Swarm announcing /ip4/127.0.0.1/udp/4001/quic
+Swarm announcing /ip4/172.31.21.9/tcp/4001
+Swarm announcing /ip4/172.31.21.9/udp/4001/quic
+Swarm announcing /ip4/54.83.105.94/udp/4001/quic
+Swarm announcing /ip6/::1/tcp/4001
+Swarm announcing /ip6/::1/udp/4001/quic
+API server listening on /ip4/127.0.0.1/tcp/5001
+WebUI: http://127.0.0.1:5001/webui
+Gateway (readonly) server listening on /ip4/127.0.0.1/tcp/8080
+Daemon is ready
+server id listening at prt 3000
+server id listening at prt 3000
+server id listening at prt 3000
+TypeError: Cannot read properties of null (reading 'file')
+    at /home/ubuntu/ipfs-connect/app.js:27:28
+    at Layer.handle [as handle_request] (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/layer.js:95:5)
+    at /home/ubuntu/ipfs-connect/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/index.js:280:10)
+    at Multipart.<anonymous> (/home/ubuntu/ipfs-connect/node_modules/express-fileupload/lib/processMultipart.js:154:41)
+    at Multipart.emit (node:events:525:35)
+TypeError: Cannot read properties of null (reading 'file')
+    at /home/ubuntu/ipfs-connect/app.js:27:28
+    at Layer.handle [as handle_request] (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/layer.js:95:5)
+    at /home/ubuntu/ipfs-connect/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/index.js:280:10)
+    at Multipart.<anonymous> (/home/ubuntu/ipfs-connect/node_modules/express-fileupload/lib/processMultipart.js:154:41)
+    at Multipart.emit (node:events:525:35)
+TypeError: Cannot read properties of null (reading 'file')
+    at /home/ubuntu/ipfs-connect/app.js:27:28
+    at Layer.handle [as handle_request] (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/layer.js:95:5)
+    at /home/ubuntu/ipfs-connect/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/index.js:280:10)
+    at Multipart.<anonymous> (/home/ubuntu/ipfs-connect/node_modules/express-fileupload/lib/processMultipart.js:154:41)
+    at Multipart.emit (node:events:525:35)
+TypeError: Cannot read properties of null (reading 'file')
+    at /home/ubuntu/ipfs-connect/app.js:27:28
+    at Layer.handle [as handle_request] (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/layer.js:95:5)
+    at /home/ubuntu/ipfs-connect/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/index.js:280:10)
+    at Multipart.<anonymous> (/home/ubuntu/ipfs-connect/node_modules/express-fileupload/lib/processMultipart.js:154:41)
+    at Multipart.emit (node:events:525:35)
+TypeError: Cannot read properties of null (reading 'file')
+    at /home/ubuntu/ipfs-connect/app.js:27:28
+    at Layer.handle [as handle_request] (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/layer.js:95:5)
+    at /home/ubuntu/ipfs-connect/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/index.js:280:10)
+    at Multipart.<anonymous> (/home/ubuntu/ipfs-connect/node_modules/express-fileupload/lib/processMultipart.js:154:41)
+    at Multipart.emit (node:events:525:35)
+TypeError: Cannot read properties of null (reading 'file')
+    at /home/ubuntu/ipfs-connect/app.js:27:28
+    at Layer.handle [as handle_request] (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/layer.js:95:5)
+    at /home/ubuntu/ipfs-connect/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/index.js:280:10)
+    at Multipart.<anonymous> (/home/ubuntu/ipfs-connect/node_modules/express-fileupload/lib/processMultipart.js:154:41)
+    at Multipart.emit (node:events:525:35)
+TypeError: Cannot read properties of null (reading 'file')
+    at /home/ubuntu/ipfs-connect/app.js:27:28
+    at Layer.handle [as handle_request] (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/layer.js:95:5)
+    at /home/ubuntu/ipfs-connect/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/index.js:280:10)
+    at Multipart.<anonymous> (/home/ubuntu/ipfs-connect/node_modules/express-fileupload/lib/processMultipart.js:154:41)
+    at Multipart.emit (node:events:525:35)
+TypeError: Cannot read properties of null (reading 'file')
+    at /home/ubuntu/ipfs-connect/app.js:27:28
+    at Layer.handle [as handle_request] (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/layer.js:95:5)
+    at /home/ubuntu/ipfs-connect/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/index.js:280:10)
+    at Multipart.<anonymous> (/home/ubuntu/ipfs-connect/node_modules/express-fileupload/lib/processMultipart.js:154:41)
+    at Multipart.emit (node:events:525:35)
+TypeError: Cannot read properties of null (reading 'file')
+    at /home/ubuntu/ipfs-connect/app.js:27:28
+    at Layer.handle [as handle_request] (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/layer.js:95:5)
+    at /home/ubuntu/ipfs-connect/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/ubuntu/ipfs-connect/node_modules/express/lib/router/index.js:280:10)
+    at Multipart.<anonymous> (/home/ubuntu/ipfs-connect/node_modules/express-fileupload/lib/processMultipart.js:154:41)
+    at Multipart.emit (node:events:525:35)
+/home/ubuntu/ipfs-connect/app.js:17
+})
+ ^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:360:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1088:15)
+    at Module._compile (node:internal/modules/cjs/loader:1123:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1213:10)
+    at Module.load (node:internal/modules/cjs/loader:1037:32)
+    at Module._load (node:internal/modules/cjs/loader:878:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at node:internal/main/run_main_module:23:47
+
+Node.js v18.12.1

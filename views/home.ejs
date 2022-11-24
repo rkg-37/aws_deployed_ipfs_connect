@@ -1,0 +1,41 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPFS DEMO</title>
+</head>
+<body>
+    <h1>Upload file to ipfs</h1>
+    <form action="/api/upload" method="post" enctype="multipart/form-data">
+        <label for="">Filename</label>
+        <input type="text" name="fileName">
+        <br><br> 
+        <label for="">Upload file</label>
+        <input type="file" name="file">
+        <br><br>
+        <label for="">product id</label>
+        <input type="text" name="product_id">
+        <br><br> 
+        <label for="">product name</label>
+        <input type="text" name="product_name">
+        <br><br> 
+        <label for="">product description</label>
+        <input type="text" name="prod_desc">
+        <br><br> 
+        <label for="">warranty id</label>
+        <input type="text" name="warranty_id">
+        <br><br> 
+        <label for="">warranty name</label>
+        <input type="text" name="warranty_name">
+        <br><br> 
+        <label for="">warranty description</label>
+        <input type="text" name="warranty_desc">
+        <br><br> 
+
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

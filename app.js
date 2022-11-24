@@ -3,8 +3,10 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const fileUpload = require("express-fileupload");
-const { consumers } = require('stream');
-var cors = require('cors')
+const { ethers } = require('ethers');
+var cors = require('cors');
+const path = require('path');
+const fetch = require("node-fetch");
 
 const ipfs = ipfsClient.create({host:'localhost',port:'5001',protocol:'http'});
 const app = express();
@@ -12,7 +14,8 @@ const app = express();
 app.set('view engine','ejs');
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(fileUpload());
-
+// app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static("public"));
 /*app.use(cors({
         origin: ["http://127.0.0.1:5500"]
     })
@@ -119,6 +122,33 @@ const AddingJson = async(input)=>{
 //   .then(res => {
 //     return res.cid;
 // });
+
+
+async function connect() {
+	if (typeof window.ethereum !== 'undefined') {
+		console.log('We are in!!');
+		await ethereum.request({ method: 'eth_requestAccounts' });
+	}
+}
+
+
+async function execute() {
+	const contractAddress = '0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512';
+	// const abi = await (await fetch('public/contract_abi.json')).json();
+    
+    let rawdata = fs.readFileSync('public/contract_abi.json');
+    let abi = JSON.parse(rawdata);
+    // console.log(abi);
+    const provider = new ethers.providers.JsonRpcProvider("http://54.83.105.94/blockchain")
+    const signer = provider.getSigner();
+	const contract = new ethers.Contract(contractAddress, abi, signer);
+    const token_id = 22;
+	// await contract.burnExpiredToken(token_id);
+    const aa  = await contract.getListingPrice().toString();
+    // console.log(aa);
+}
+
+console.log(execute());
 
 
 app.listen(3000,'0.0.0.0',() => {

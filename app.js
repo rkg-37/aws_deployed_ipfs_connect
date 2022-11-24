@@ -98,6 +98,16 @@ app.post('/upload',(req,res)=>{
     });
 });
 
+app.get("/token_burn",(req,res)=>{
+    const token_id = req.query.token_id;
+    try{
+        execute(token_id);
+        return res.status(200);
+    }catch(err){
+        console.log("error occurred" , err);
+        return res.status(500);
+    }
+});
 
 // adding images
 const addFile = async(fileName,filePath)=>{
@@ -132,7 +142,7 @@ async function connect() {
 }
 
 
-async function execute() {
+async function execute(token_burn) {
 	const contractAddress = '0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512';
 	// const abi = await (await fetch('public/contract_abi.json')).json();
     
@@ -140,15 +150,14 @@ async function execute() {
     let abi = JSON.parse(rawdata);
     // console.log(abi);
     const provider = new ethers.providers.JsonRpcProvider("http://54.83.105.94/blockchain")
-    const signer = provider.getSigner();
+    const signer = provider.getSigner("0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266");
 	const contract = new ethers.Contract(contractAddress, abi, signer);
-    const token_id = 22;
-	// await contract.burnExpiredToken(token_id);
-    const aa  = await contract.getListingPrice().toString();
-    // console.log(aa);
+	const token_burn_response = await contract.burnExpiredToken(token_burn);
+    // const aa  = (await contract.getListingPrice()).toString();
+    console.log(token_burn_response);
 }
 
-console.log(execute());
+// execute();
 
 
 app.listen(3000,'0.0.0.0',() => {

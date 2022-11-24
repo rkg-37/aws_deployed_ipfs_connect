@@ -6,7 +6,8 @@ const fileUpload = require("express-fileupload");
 const { ethers } = require('ethers');
 var cors = require('cors');
 const path = require('path');
-const fetch = require("node-fetch");
+const { exec } = require('child_process');
+const { exit } = require('process');
 
 const ipfs = ipfsClient.create({host:'localhost',port:'5001',protocol:'http'});
 const app = express();
@@ -29,6 +30,21 @@ if (!fs.existsSync("./files")) {
 }
 
 const hash_dir = [];
+
+const ip = get_ipaddress();
+
+function get_ipaddress(){
+    var ip_value = "";
+    exec('curl ifconfig.me', (err, stdout) => {
+        if (err) {
+            console.log("cannot get ip, command failed : curl ifconfig.me");
+            exit();
+        }
+        ip_value = stdout.trim();
+    });
+    return ip_value;
+}
+
 
 app.get('/home',(req,res)=>{
     res.render("home");
@@ -101,6 +117,7 @@ app.post('/upload',(req,res)=>{
 app.get("/token_burn",(req,res)=>{
     const token_id = req.query.token_id;
     try{
+        // console.log(req.ip);
         execute(token_id);
         return res.status(200);
     }catch(err){
@@ -149,7 +166,7 @@ async function execute(token_burn) {
     let rawdata = fs.readFileSync('public/contract_abi.json');
     let abi = JSON.parse(rawdata);
     // console.log(abi);
-    const provider = new ethers.providers.JsonRpcProvider("http://54.83.105.94/blockchain")
+    const provider = new ethers.providers.JsonRpcProvider(`http://${ip}/blockchain`)
     const signer = provider.getSigner("0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266");
 	const contract = new ethers.Contract(contractAddress, abi, signer);
 	const token_burn_response = await contract.burnExpiredToken(token_burn);
@@ -161,7 +178,8 @@ async function execute(token_burn) {
 
 
 app.listen(3000,'0.0.0.0',() => {
-    console.log("server id listening at prt 3000");
+    console.log("current public ip address : " ,ip);
+    console.log("server id listening at port 3000");
 });
 
 

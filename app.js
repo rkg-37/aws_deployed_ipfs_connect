@@ -39,7 +39,8 @@ app.post('/upload',(req,res)=>{
     const product_name = req.body.product_name;
     const product_desc = req.body.product_desc;
     const product_price = req.body.product_price;
-    //const warranty_id = req.body.warranty_id;
+    const warranty_secretkey = req.body.warranty_secretkey;
+    const expiry_duration = req.body.expiry_duration;
     const warranty_name = req.body.warranty_name;
     const warranty_desc = req.body.warranty_desc;
     
@@ -65,12 +66,14 @@ app.post('/upload',(req,res)=>{
                 "product_id":product_id,
                 "product_name":product_name,
                 "product_desc":product_desc,
+                "product_price":product_price,
                 "product_image_hash":fileHash.toString()
             },
             "warranty":{
-     //           "warranty_id":warranty_id,
+               "warranty_secretkey":warranty_secretkey,
                 "warranty_name":warranty_name,
                 "warranty_desc":warranty_desc,
+                "expiry_duration":expiry_duration
             }
         }
         // console.log(JSON.stringify(prod));

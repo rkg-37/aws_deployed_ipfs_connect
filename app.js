@@ -6,9 +6,10 @@ const fileUpload = require("express-fileupload");
 const { ethers } = require('ethers');
 var cors = require('cors');
 const path = require('path');
-const { exec } = require('child_process');
-const { exit } = require('process');
 
+const { exit } = require('process');
+const util = require('util');
+const exec = util.promisify(require('child_process').exec);
 const ipfs = ipfsClient.create({host:'localhost',port:'5001',protocol:'http'});
 const app = express();
 
@@ -31,16 +32,22 @@ if (!fs.existsSync("./files")) {
 
 const hash_dir = [];
 
-
+/*
 var ip = "";
-exec('curl ifconfig.me', (err, stdout) => {
-    if (err) {
+exec('node | curl ifconfig.me', (err, stdout) => {
+   if (err) {
         console.log("cannot get ip, command failed : curl ifconfig.me");
         exit();
     }
     ip = stdout.trim();
 });
-    
+ */  
+
+let ip = "0.0.0.0";
+async function ls() {
+  const { stdout, stderr } = await exec('curl ifconfig.me');
+  return  stdout.trim();
+}
 
 
 app.get('/home',(req,res)=>{
@@ -174,7 +181,8 @@ async function execute(token_burn) {
 // execute();
 
 
-app.listen(3000,'0.0.0.0',() => {
+app.listen(3000,'0.0.0.0',async () => {
+    ip = await ls();
     console.log("current public ip address : " ,ip);
     console.log("server id listening at port 3000");
 });

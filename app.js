@@ -112,7 +112,7 @@ app.post('/upload',(req,res)=>{
 */
 	responseObject = {
 		fileName: fileName,
-		finalHash: fileHash.toString(),
+		finalHash: finalHash.toString(),
 	}
 	return res.status(200).json(responseObject)
     });

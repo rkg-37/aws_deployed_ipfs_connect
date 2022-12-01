@@ -45,7 +45,7 @@ exec('node | curl ifconfig.me', (err, stdout) => {
 
 let ip = "0.0.0.0";
 async function ls() {
-  const { stdout, stderr } = await exec('curl ifconfig.me');
+  const { stdout} = await exec('curl ifconfig.me');
   return  stdout.trim();
 }
 
